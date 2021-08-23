@@ -1,2 +1,2 @@
-# proyectonode
-nodejs
+# Proyectocompra.me
+Proyecto Nodejs, express y hbs

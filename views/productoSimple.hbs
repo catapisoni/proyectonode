@@ -1,0 +1,52 @@
+ <!--<div class="container-fluid  bg-info bg-gradient"> 
+ {{> buscador}}
+ </div> -->
+  <div class="container py-3">
+    <nav style="--bs-breadcrumb-divider: '>';"aria-label="breadcrumb">
+    <ol class="breadcrumb">
+    <li class="breadcrumb-item"><strong>Inicio</strong></li>
+    <li class="breadcrumb-item"><strong>Productos</strong></li>
+    <li class="breadcrumb-item active" aria-current="page"><strong>{{prodSingle.categoria}}</strong></li>
+    </ol>
+    <a href="/productos"><strong>Volver</strong></a>
+    </nav>
+
+  </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+            {{#if prodSingle.imagen}}
+            <img src="/images/{{prodSingle.imagen}}" alt="">
+            {{else}}
+            <img src="/images/default.png" alt="{{nombre}}">
+            {{/if}}
+            </div>
+            <div class="col-6">
+                <h3>
+                {{prodSingle.nombre}}
+                </h3>
+                <p>
+                {{prodSingle.descripcion}}
+                </p>
+                <div class="row">
+                    <div class="col-6 h3">
+                        $ {{prodSingle.precio}}.-
+                    </div>
+                    <div class="col-6">
+                        {{#if prodSingle.stock}}
+                            <span class="badge btn-secondary">Disponibles: {{prodSingle.stock}}</span>
+                            <a href="" class="btn btn-success">Agregar al carrito</a>
+                        {{else}}
+                            <a href="" class="btn btn-secondary disabled">Sin stock</a>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+

@@ -1,0 +1,52 @@
+ <div class="container-fluid">
+        <div class="container mt-5">
+            <div class="breadcrumb">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb  ">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page">
+                            <a class="text-dark" href="/">Home</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a class="text-dark" href="/productos">Productos</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            {{prodSingle.categoria}}
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        
+        
+        <h2>Cargar Nuevo producto</h2>
+        <form action="" method="post" class="w-50 my-5">
+            <input class="form-control my-2" type="text" name="nombre" id="" placeholder="nombre" required>
+            <input class="form-control my-2" type="text" name="descripcion" id="" placeholder="descripcion" required>            
+            <label for="exampleFormControlFile1">Ingrese imagen del producto:</label> <br>
+            <input type="file" class="form-control-file" name="imagen" id="exampleFormControlFile1">
+            <input class="form-control my-2" type="text" name="precio" id="" placeholder="precio" required>
+            <input class="form-control my-2" type="text" name="stock" id="" placeholder="cantidad" required>
+            <select class="form-select"  name="categoria" aria-label="Default select example">
+            <option selected>Seleccione la categoria</option>
+            <option value="1">Café</option>
+            <option value="2">Cafetería</option>
+            <option value="3">Promo</option>
+            <option value="4">Otros</option>
+            </select> 
+            <input type="submit" value="Cargar Producto" class="btn btn-success my-2" required>
+        </div>
+        </form>  
+
+         {{#if alta}}
+        <p class="alert alert-success">
+            El producto se ha cargado exitosamente
+        </p>
+        {{else}}
+        <p class="alert alert-danger">
+            {{error}}
+        </p>    
+        {{/if}}
+
+
+
+    </div>
+</div>
